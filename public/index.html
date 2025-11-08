@@ -1,0 +1,53 @@
+<!doctype html>
+<button type="button" class="btn-ghost" data-close>Cancelar</button>
+</div>
+</form>
+</div>
+</div>
+
+
+<!-- Modal: Login -->
+<div id="modal-login" class="modal" aria-hidden="true">
+<div class="modal-dialog">
+<button class="modal-close" data-close>&times;</button>
+<h3>Entrar</h3>
+<form id="form-login">
+<label>Usuário (e-mail)
+<input type="email" name="email" required />
+</label>
+<label>Senha
+<input type="password" name="password" required minlength="8" />
+</label>
+<div class="form-actions">
+<button type="submit" class="btn-primary">Entrar</button>
+<button type="button" class="btn-ghost" data-close>Fechar</button>
+</div>
+</form>
+</div>
+</div>
+
+
+<!-- Área restrita (aparece quando logado) -->
+<div id="private-area" class="container private" hidden>
+<div class="card">
+<h2>Área do usuário</h2>
+<p>Bem-vindo, <span id="u-nome"></span> — documento: <span id="u-doc"></span></p>
+<p>Usuário: <code id="u-user"></code></p>
+
+
+<h3>Exemplo de uso da API</h3>
+<pre id="api-snippet">curl -X POST http://SEU_SERVIDOR:8000/generate -H "Authorization: Bearer &lt;TOKEN&gt;" -H "Content-Type: application/json" -d '{"prompt":"Olá"}'</pre>
+
+
+<button id="btn-logout" class="btn-ghost">Sair</button>
+</div>
+</div>
+
+
+<footer class="site-footer">
+<div class="container">
+<small>© 2025 Clínica / Gemma API. Projeto exemplo.</small>
+</div>
+</footer>
+</body>
+</html>
